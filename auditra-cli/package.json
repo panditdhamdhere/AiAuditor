@@ -1,0 +1,26 @@
+{
+  "name": "auditra-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool to audit the smart contracts using OpenAI",
+  "main": "index.js",
+  "bin": {
+    "auditai": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "audit",
+    "smart contract",
+    "openai"
+  ],
+  "author": "pandit",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^12.1.0",
+    "openai": "^4.73.0"
+  }
+}
