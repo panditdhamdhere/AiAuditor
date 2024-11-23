@@ -16,3 +16,7 @@ contract SimpleContract {
         return count;
     }
 }
+
+ // "bin": {
+  //   "auditai": "./index.js"
+  // },

@@ -3,6 +3,7 @@
 const { Command } = require("commander");
 
 const inquirer = require("inquirer");
+// const inquirer = require('inquirer');
 
 const { analyzeContract } = require("./src/ai-prompt");
 
@@ -17,19 +18,17 @@ program
   .description("A CLI tool to audit the smart contracts using OpenAI")
   .version("1.0.0");
 
-const getApiKey = async () => {
-  const { apiKey } = await inquirer.prompt([
-    {
-      type: "input",
-      name: "apiKey",
-      message: "Enter your OpenAI API Key",
-      validate: (input) =>
-        input.length > 0 || "Please enter your OpenAI API Key",
-    },
-  ]);
-
-  return apiKey;
-};
+  const getApiKey = async () => {
+    const { apiKey } = await inquirer.prompt([
+      {
+        type: "input",
+        name: "apiKey",
+        message: "Enter your OpenAI API key:",
+        validate: (input) => input.length > 0 || "API key is required",
+      },
+    ]);
+    return apiKey;
+  };
 
 program
   .command("check <file>")
